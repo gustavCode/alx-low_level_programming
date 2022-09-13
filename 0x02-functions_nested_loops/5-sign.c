@@ -5,8 +5,8 @@
  * @n: integer to be checked
  *
  * Return: 1 and print + if n is greater than 0
- * 	0 and print 0 if n is equal to 0
- * 	-1 and pirnt - if n is less than 0
+ *	0 and print 0 if n is equal to 0
+ *	-1 and pirnt - if n is less than 0
  */
 int print_sign(int n)
 {
