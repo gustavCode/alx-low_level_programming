@@ -7,7 +7,6 @@
  * @month: month in numbers format
  * @day: day of the month
  * @year: year
- *
  * Return: void
  */
 
