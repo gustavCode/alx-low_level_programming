@@ -9,24 +9,18 @@
 int main(void)
 {
 	long prime  = 612852475143;
-	long divident;
+	long largest, x;
+	double square = sqrt(prime);
 
-	while (divident < (prime / 2))
+	for (x = 1; x <= square; x++)
 	{
-		if ((prime % 2) == 0)
+		if (prime % x == 0)
 		{
-			prime /= 2;
-			continue;
-		}
-
-		for (divident = 3; divident < (prime / 2); divident += 2)
-		{
-			if ((prime % divident) == 0)
-				prime /= divident;
+			largest = prime / x;
 		}
 	}
 
-	printf("%ld\n", prime);
+	printf("%ld\n", largest);
 
 	return (0);
 }
