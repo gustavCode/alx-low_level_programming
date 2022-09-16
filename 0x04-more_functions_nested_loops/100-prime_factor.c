@@ -8,19 +8,25 @@
  */
 int main(void)
 {
-	long prime  = 612852475143;
-	long largest, x;
-	double square = sqrt(prime);
+	long prime = 612852475143, div;
 
-	for (x = 1; x <= square; x++)
+	while (div < (prime / 2))
 	{
-		if (prime % x == 0)
+		if ((prime % 2) == 0)
 		{
-			largest = prime / x;
+			prime /= 2;
+			continue;
+		}
+
+		for (div = 3; div < (prime / 2); div += 2)
+		{
+			if ((prime % div) == 0)
+			{
+				prime /= div;
+			}
 		}
 	}
-
-	printf("%ld\n", largest);
+	printf("%ld\n", prime);
 
 	return (0);
 }
