@@ -6,8 +6,8 @@
  */
 void puts2(char *str)
 {
-	      int i, len = 0;
-  
+	int i, len = 0;
+
 	while (str[i++])
 		len++;
 
