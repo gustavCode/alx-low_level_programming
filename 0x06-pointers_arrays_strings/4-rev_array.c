@@ -18,7 +18,7 @@ void reverse_array(int *a, int n)
 
 	for (j = 0; j < i / 2; j++)
 	{
-		swarr = a[j];
+		swp = a[j];
 		a[j] = *arr;
 		*arr = swp;
 		arr--;
