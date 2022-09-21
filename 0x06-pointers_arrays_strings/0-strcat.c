@@ -9,14 +9,21 @@
  */
 char *strcat(char *dest, char *src)
 {
-	int i = 0;
+	char *d_end = dest;
 	int d_length = 0;
 
-	while (dest[i++])
-		d_length++;
+	while (*d_end)
+		++d_end;
 
-	for (i = 0; src[i]; i++)
-		dest[d_length++] = src[i];
+	while (src[d_length])
+		++d_length;
+
+	if ((src + d_length < dest) || (d_end + d_length < src))
+	{
+		do {
+			*d_end++ = *src++;
+		} while (d_length--);
+	}
 
 	return (dest);
 }
