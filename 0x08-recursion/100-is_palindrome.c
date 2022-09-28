@@ -40,7 +40,7 @@ int check_palindrome(char *s)
 /**
  * _strlen_recursion - Get the length of a string
  * @s: the string to get the length
- * 
+ *
  * Return: the string length
  */
 int _strlen_recursion(char *s)
