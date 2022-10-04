@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * argostostr - Concatenates all the arguments of your program
+ * argstostr - Concatenates all the arguments of your program
  * @ac: first argument
  * @av: second argument
  *
