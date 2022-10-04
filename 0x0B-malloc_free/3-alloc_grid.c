@@ -8,7 +8,7 @@
  *
  * Return: NULL on failure, or if weight or height is NULL
  */
-int **alloc_grid(int weight, int height)
+int **alloc_grid(int width, int height)
 {
 	int **two_dim;
 	int h_index, w_index;
