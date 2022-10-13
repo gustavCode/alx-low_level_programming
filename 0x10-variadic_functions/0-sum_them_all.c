@@ -10,18 +10,23 @@
  */
 int sum_them_all(const unsigned int n, ...)
 {
-	va_list digits;
-	unsigned int i, sum = 0;
+	va_list args;
+	unsigned int i = 0;
+	int sum = 0;
 
-	va_start(digits, n);
+	if (n != 0)
+	{
+		va_start(args, n);
 
-	if (n == 0)
-		return (0);
+		while (i < n)
+		{
+			sum += va_arg(args, int);
+			i++;
+		}
 
-	for (i = 0; i < n; i++)
-		sum += va_args(digits, int);
+		va_end(args);
+		return (sum);
+	}
 
-	va_end(digits);
-
-	return (sum);
+	return (0);
 }
