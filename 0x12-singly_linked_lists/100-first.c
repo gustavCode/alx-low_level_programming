@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-void __attribute__((constructor)) first(void);
+void first(void) __attribute__((constructor));
 
 /**
  * first - Prints a string before
- *		main function is executed
+ *	main function is executed
  * 
  * Return: void
  */
