@@ -2,11 +2,11 @@
 
 /**
  * looped_listint_len - Counts the number of unique nodes
- *		in a looped listint_t linked list.
- * @head: A pointer to the head of the listint_t to check.
+ *		in a looped listint_t linked list
+ * @head: pointer to the head of the listint_t to check
  *
  * Return: 0 if list is not looped else
- *		number of unique nodes in the list.
+ *		number of unique nodes in the list
  */
 size_t looped_listint_len(const listint_t *head)
 {
