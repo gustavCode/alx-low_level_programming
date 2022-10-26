@@ -24,7 +24,6 @@ size_t looped_listint_count(listint_t *head)
 		if (t == hare)
 		{
 			t = head;
-
 			while (t != hare)
 			{
 				nodes++;
@@ -33,7 +32,6 @@ size_t looped_listint_count(listint_t *head)
 			}
 
 			t = t->next;
-
 			while (t != hare)
 			{
 				nodes++;
@@ -46,7 +44,6 @@ size_t looped_listint_count(listint_t *head)
 		t = t->next;
 		hare = (hare->next)->next;
 	}
-
 	return (0);
 }
 
