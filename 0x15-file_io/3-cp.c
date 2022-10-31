@@ -3,10 +3,10 @@
 #include <stdlib.h>
 
 /**
- * create_buffer - Allocates 1024 bytes for a buffer.
- * @file: name of the file buffer is storing chars for.
+ * create_buffer - Allocates 1024 bytes for a buffer
+ * @file: name of the file buffer is storing chars for
  *
- * Return: A pointer to the newly-allocated buffer.
+ * Return: A pointer to the newly-allocated buffer
  */
 char *create_buffer(char *file)
 {
@@ -38,7 +38,8 @@ void close_file(int fd)
 
 	if (c == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO,
+			"Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
@@ -57,7 +58,8 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO,
+			"Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
@@ -86,7 +88,6 @@ int main(int argc, char *argv[])
 
 		r = read(from, buffer, 1024);
 		to = open(argv[2], O_WRONLY | O_APPEND);
-
 	} while (r > 0);
 
 	free(buffer);
