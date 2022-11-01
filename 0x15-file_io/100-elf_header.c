@@ -62,7 +62,7 @@ void print_class(unsigned char *e_ident)
 
 	switch (e_ident[EI_CLASS])
 	{
-		case ELFCLASSNONE:		
+		case ELFCLASSNONE:
 			printf("none\n");
 			break;
 		case ELFCLASS32:
